@@ -1,0 +1,24 @@
+/* Custom styles for the Testimonial Slider */
+
+/* Make active slide stand out */
+.swiper-slide-active .testimonial-card {
+  opacity: 1 !important;
+  border-color: #5e5757 !important;
+}
+
+.swiper-slide-active .testimonial-quote {
+  color: white !important;
+}
+
+.swiper-slide-active .testimonial-author-name {
+  color: white !important;
+}
+
+.swiper-slide-active .testimonial-author-title, 
+.swiper-slide-active .testimonial-author-company {
+  color: rgb(228, 228, 231) !important; /* zinc-200 */
+}
+
+.swiper-slide-active .testimonial-company-logo {
+  opacity: 1 !important;
+}

@@ -1,0 +1,27 @@
+/* Awards Section Swiper Styles */
+.awards-swiper-container .swiper {
+  overflow: visible;
+  padding: 1rem 0;
+}
+
+.awards-swiper-container .swiper-slide {
+  width: auto;
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+/* Add hover effect to slides */
+.awards-swiper-container .swiper-slide:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom navigation button styles */
+.awards-swiper-container .swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Ensure proper spacing between slides */
+.awards-swiper-container .swiper-wrapper {
+  align-items: stretch;
+}

@@ -1,0 +1,139 @@
+/* Header default */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+/* Scrolled style */
+.header-scrolled {
+  background-color: #0e0d0d;
+  color: white;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  width: 100vw;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flex layout */
+.header-inner {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* Logo */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgb(240, 235, 235);
+}
+
+/* Navigation */
+.nav-desktop {
+  display: none;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-weight: 700;
+  color: rgb(244, 241, 241);
+  cursor: pointer;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #3b82f6;
+}
+
+/* Menu Icon */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-light {
+  color: white;
+}
+
+.icon-dark {
+  color: #111827;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  margin-top: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #4b5563;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.mobile-link:hover {
+  color: #3b82f6;
+  background: #f9fafb;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .menu-toggle,
+  .mobile-menu {
+    display: none;
+  }
+}
