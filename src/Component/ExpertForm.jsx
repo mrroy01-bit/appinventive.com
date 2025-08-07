@@ -28,7 +28,7 @@ const ContactFormSection = () => {
               <input 
                 type="text" 
                 id="full-name" 
-                className="mt-1 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                className="mt-1 py-3  block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
               />
             </div>
             <div>
@@ -36,7 +36,7 @@ const ContactFormSection = () => {
               <input 
                 type="email" 
                 id="email" 
-                className="mt-1 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                className="mt-1 py-3 px-2 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
                 required 
               />
             </div>
@@ -45,7 +45,7 @@ const ContactFormSection = () => {
               <input 
                 type="tel" 
                 id="contact" 
-                className="mt-1 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                className="mt-1 py-3 px-2 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
                 required 
               />
             </div>
@@ -53,7 +53,7 @@ const ContactFormSection = () => {
               <label htmlFor="budget" className="block text-sm font-medium text-zinc-300">Select a Budget Range</label>
               <select 
                 id="budget" 
-                className="mt-1 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                className="mt-1 py-3 px-2 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500"
               >
                 <option>Less than $10,000</option>
                 <option>$10,000 - $50,000</option>
@@ -66,7 +66,7 @@ const ContactFormSection = () => {
               <textarea 
                 id="project-brief" 
                 rows="4" 
-                className="mt-1 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                className="mt-1 py-3 px-2 block w-full rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
                 placeholder="Helps us come back better prepared..."
                 required
               ></textarea>
@@ -80,11 +80,11 @@ const ContactFormSection = () => {
               <label htmlFor="nda" className="text-sm text-zinc-300">Include Copy of a Non-Disclosure Agreement</label>
             </div>
             <div className="flex items-center space-x-4">
-              <label htmlFor="captcha" className="block text-sm font-medium text-zinc-300">6 + 3 =</label>
+              <label htmlFor="captcha" className="block px-2 py-3 text-sm font-medium text-zinc-300">6 + 3 =</label>
               <input 
                 type="number" 
                 id="captcha" 
-                className="w-20 rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
+                className="w-20 py-3 px-2 rounded-md border-zinc-700 bg-zinc-800 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500" 
                 required 
               />
             </div>

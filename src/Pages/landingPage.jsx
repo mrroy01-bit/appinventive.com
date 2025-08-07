@@ -12,6 +12,7 @@ import CenteredCardSlider from "../Component/CenterCard";
 import TimelineSlider from "../Component/TimelineSlider";
 import TestimonialSlider from "../Component/TestimonialSlider";
 import ExpertForm from "../Component/ExpertForm";
+import StackedCards from "../Component/StackedCards";
 import logo1 from "../assest/logo1.svg";
 import logo2 from "../assest/logo2.svg";
 import logo3 from "../assest/logo3.png";
@@ -193,6 +194,7 @@ const LandingPage = () => {
         <TimelineSlider />
         <TestimonialSlider />
         <ExpertForm />
+        <StackedCards />
       </main>
     </>
   );
