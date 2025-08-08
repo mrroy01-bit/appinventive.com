@@ -1,60 +1,61 @@
-import React, { useEffect, useRef } from "react";
-import Lenis from "@studio-freight/lenis";
-import Header from "../Component/Header";
-import TestimonialSection from "../Component/TestimonialSection";
-import ServicesSection from "../Component/services";
-import RoiOfIntelligenceSection from "../Component/RoiCard";
-import AwardsSection from "../Component/AwardsSection";
-import IndustrySlider from "../Component/IndustrySlider";
-import PartnershipLogos from "../Component/PartnerShip";
-import GlobalPartnerships from "../Component/GlobalPartnerShip";
-import CenteredCardSlider from "../Component/CenterCard";
-import TimelineSlider from "../Component/TimelineSlider";
-import TestimonialSlider from "../Component/TestimonialSlider";
-import ExpertForm from "../Component/ExpertForm";
-import TechTab from "../Component/TechTab";
-import StackedCards from "../Component/StackedCards";
-import Locations from "../Component/Locations";
-import Footer from "../Component/Footer";
-import logo1 from "../assest/logo1.svg";
-import logo2 from "../assest/logo2.svg";
-import logo3 from "../assest/logo3.png";
-import logo4 from "../assest/logo4.svg";
-import logo5 from "../assest/logo5.svg";
+import React, { useEffect } from "react";
+import Header from "../Component/common/Header";
+import TestimonialSection from "../Component/landingPage/TestimonialSection";
+import ServicesSection from "../Component/landingPage/services";
+import RoiOfIntelligenceSection from "../Component/landingPage/RoiCard";
+import AwardsSection from "../Component/landingPage/AwardsSection";
+import IndustrySlider from "../Component/landingPage/IndustrySlider";
+import PartnershipLogos from "../Component/landingPage/PartnerShip";
+import GlobalPartnerships from "../Component/landingPage/GlobalPartnerShip";
+import CenteredCardSlider from "../Component/landingPage/CenterCard";
+import TimelineSlider from "../Component/landingPage/TimelineSlider";
+import TestimonialSlider from "../Component/landingPage/TestimonialSlider";
+import AIAdvisory from "../Component/landingPage/AIAdvisory";
+import ExpertForm from "../Component/landingPage/ExpertForm";
+import TechTab from "../Component/landingPage/TechTab";
+import StackedCards from "../Component/landingPage/StackedCards";
+import Locations from "../Component/landingPage/Locations";
+import Footer from "../Component/common/Footer";
+import ScrollToTop from "../Component/common/ScrollToTop";
+import SmoothScrollLink from "../Component/common/SmoothScrollLink";
+import logo1 from "../assest/common/logo1.svg";
+import logo2 from "../assest/common/logo2.svg";
+import logo3 from "../assest/common/logo3.png";
+import logo4 from "../assest/common/logo4.svg";
+import logo5 from "../assest/common/logo5.svg";
+import { useSmoothScroll } from "../hooks/useSmoothScroll";
 
 const LandingPage = () => {
   const logos = [logo1, logo2, logo3, logo4, logo5];
-
-  const lenisRef = useRef(null);
+  
+  const { scrollTo } = useSmoothScroll({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-      smoothTouch: false,
-    });
-
-    lenisRef.current = lenis;
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(raf);
+    // Handle anchor links for smooth scrolling
+    const handleAnchorLinks = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = hash.substring(1);
+        setTimeout(() => {
+          scrollTo(`#${id}`);
+        }, 100);
+      }
     };
-  }, []);
 
-  const handleScroll = () => {
-    const target = document.querySelector("#contact");
-    if (lenisRef.current && target) {
-      lenisRef.current.scrollTo(target);
-    }
-  };
+    // Call once on mount to handle initial URL with hash
+    handleAnchorLinks();
+
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleAnchorLinks);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('hashchange', handleAnchorLinks);
+    };
+  }, [scrollTo]);
 
   return (
     <>
@@ -69,7 +70,7 @@ const LandingPage = () => {
             className="absolute top-0 left-0 w-full h-full object-cover -z-10"
           >
             <source
-              src={require("../assest/home-video-new.mp4")}
+              src={require("../assest/common/home-video-new.mp4")}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -85,12 +86,12 @@ const LandingPage = () => {
               for unmatched customer excellence...
             </span>
             <div className="mt-10">
-              <button
-                onClick={handleScroll}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg mr-4 border-2 border-transparent hover:bg-transparent hover:border-white transition-colors duration-200"
+              <SmoothScrollLink
+                to="#contact"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg mr-4 border-2 border-transparent hover:bg-transparent hover:border-white transition-colors duration-200 inline-block"
               >
                 Consult Our Experts
-              </button>
+              </SmoothScrollLink>
             </div>
           </div>
         </div>
@@ -182,27 +183,28 @@ const LandingPage = () => {
           </div>
         </section>
 
+        <StackedCards />
         <TestimonialSection />
 
         <ServicesSection />
 
         <RoiOfIntelligenceSection />
-
+        <TimelineSlider />
+        <AIAdvisory />
         <GlobalPartnerships />
         <AwardsSection />
+        <TestimonialSlider />
         <IndustrySlider />
+        <TechTab />
         <PartnershipLogos />
 
         <CenteredCardSlider />
-        <TimelineSlider />
-        <TestimonialSlider />
         <ExpertForm />
-        <TechTab />
 
-        <StackedCards />
         <Locations />
-<Footer />
+        <Footer />
       </main>
+      <ScrollToTop threshold={400} position="right" />
     </>
   );
 };
