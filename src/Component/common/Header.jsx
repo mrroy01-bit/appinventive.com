@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import Delo from "../../assest/ads/dellot.webp"
 import Logo from "../../assest/common/AppLogo.svg";
-import { CaretDownIcon, CodeIcon, PersonIcon, GearIcon, BarChartIcon, ReaderIcon, VideoIcon, Link2Icon, PlusIcon, StarIcon, GlobeIcon, HomeIcon, ChatBubbleIcon, RocketIcon } from '@radix-ui/react-icons';
+import { CaretDownIcon, CodeIcon, PersonIcon, GearIcon, BarChartIcon,  StarIcon, GlobeIcon, HomeIcon,  RocketIcon } from '@radix-ui/react-icons';
 
 // A reusable list item component for dropdown links
 const ListItem = React.forwardRef(({ className, children, title, ...props }, forwardedRef) => (
@@ -22,13 +22,7 @@ const ListItem = React.forwardRef(({ className, children, title, ...props }, for
 ));
 ListItem.displayName = "ListItem";
 
-// Main App Component
-export default function App() {
-  return (
-    <Header />
 
-  );
-}
 
 // Header Component
 const Header = () => {
@@ -41,12 +35,12 @@ const Header = () => {
                     <div className="flex flex-col">
                         <ul className="flex flex-col space-y-1 list-none p-0 m-0">
                             <ListItem href="/about" title="About Appinventiv" />
-                            <ListItem href="#" title="Our Core Team" />
-                            <ListItem href="#" title="How We Work and Function" />
+                            <ListItem href="/about/core-team" title="Our Core Team" />
+                            <ListItem href="/about/we-work" title="How We Work and Function" />
                             <ListItem href="#" title="Client Portfolio" />
-                            <ListItem href="#" title="Client Testimonials" />
-                            <ListItem href="#" title="Corporate Social Responsibility" />
-                            <ListItem href="#" title="Start Your Career With Us" />
+                            <ListItem href="/about/clients-testimonial" title="Client Testimonials" />
+                            <ListItem href="/about/corporate" title="Corporate Social Responsibility" />
+                            <ListItem href="/about/career" title="Start Your Career With Us" />
                         </ul>
                     </div>
                     <div className="flex flex-col h-full">
@@ -63,47 +57,48 @@ const Header = () => {
         {
             name: "Services",
             content: (
-                <div className="w-[650px] max-w-[90vw] p-4 overflow-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div>
-                            <h3 className="flex items-center mb-3 text-sm font-medium text-neutral-500"><CodeIcon className="w-4 h-4 mr-2"/> Product Development & Engineering</h3>
-                            <ul className="space-y-2 list-none p-0 m-0">
-                                <ListItem href="#" title="Product Design" className="p-2"/>
-                                <ListItem href="#" title="Application Development" className="p-2"/>
-                                <ListItem href="#" title="Software Development" className="p-2"/>
-                                <ListItem href="#" title="QA and Testing" className="p-2"/>
-                                <ListItem href="#" title="DevOps" className="p-2"/>
-                                <ListItem href="#" title="Product Management" className="p-2"/>
+                <div className="w-[700px] max-w-[90vw] p-6 overflow-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-gradient-to-br from-blue-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="flex items-center mb-4 text-sm font-semibold text-blue-600"><CodeIcon className="w-5 h-5 mr-2"/> Product Development</h3>
+                            <ul className="space-y-3 list-none p-0 m-0">
+                                <ListItem href="/services/android-app-development" title="App Development Android" className="p-2 hover:bg-blue-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="/services/ios-app-development" title="App Development iOS" className="p-2 hover:bg-blue-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="/services/website-development" title="Website Development" className="p-2 hover:bg-blue-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="/services/portfolio-design" title="Portfolio Design" className="p-2 hover:bg-blue-50 rounded-md transition-colors duration-200"/>
+                            </ul>
+                        </div>
+                        <div className="bg-gradient-to-br from-green-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <h3 className="flex items-center mb-4 text-sm font-semibold text-green-600"><GearIcon className="w-5 h-5 mr-2"/> SEO Services</h3>
+                            <ul className="space-y-3 list-none p-0 m-0">
+                                <ListItem href="#" title="On-page & Off-page SEO" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="#" title="Technical SEO" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="#" title="Website Audit & Analysis" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="#" title="SEO Content Strategy" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="flex items-center mb-3 text-sm font-medium text-neutral-500"><GearIcon className="w-4 h-4 mr-2"/> Digital Transformation</h3>
-                             <ul className="space-y-2 list-none p-0 m-0">
-                                <ListItem href="#" title="Legacy Application Modernization" className="p-2"/>
-                                <ListItem href="#" title="Cloud" className="p-2"/>
-                                <ListItem href="#" title="Blockchain" className="p-2"/>
-                                <ListItem href="#" title="Cybersecurity" className="p-2"/>
-                                <ListItem href="#" title="IoT" className="p-2"/>
-                                <ListItem href="#" title="AR/VR" className="p-2"/>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="flex items-center mb-3 text-sm font-medium text-neutral-500"><PersonIcon className="w-4 h-4 mr-2"/> Consulting Services</h3>
-                             <ul className="space-y-2 list-none p-0 m-0">
-                                <ListItem href="#" title="IT Consulting" className="p-2"/>
-                                <ListItem href="#" title="Software Consulting" className="p-2"/>
-                            </ul>
-                             <h3 className="flex items-center mt-6 mb-3 text-sm font-medium text-neutral-500"><BarChartIcon className="w-4 h-4 mr-2"/> Data Services</h3>
-                             <ul className="space-y-2 list-none p-0 m-0">
-                                <ListItem href="#" title="Big Data" className="p-2"/>
-                                <ListItem href="#" title="Data Analytics" className="p-2"/>
-                            </ul>
+                            <div className="bg-gradient-to-br from-purple-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 mb-6">
+                                <h3 className="flex items-center mb-4 text-sm font-semibold text-purple-600"><PersonIcon className="w-5 h-5 mr-2"/>Graphics Design</h3>
+                                <ul className="space-y-3 list-none p-0 m-0">
+                                    <ListItem href="#" title="Video Editing" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="#" title="Logo Designing" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="#" title="Flayer Design" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
+                                </ul>
+                            </div>
+                            <div className="bg-gradient-to-br from-amber-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                                <h3 className="flex items-center mb-4 text-sm font-semibold text-amber-600"><BarChartIcon className="w-5 h-5 mr-2"/> Printing Services</h3>
+                                <ul className="space-y-3 list-none p-0 m-0">
+                                    <ListItem href="#" title="Flex Printing & Delivery" className="p-2 hover:bg-amber-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="#" title="Banner Printing & Delivery" className="p-2 hover:bg-amber-50 rounded-md transition-colors duration-200"/>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div className="p-4 mt-6 bg-yellow-100 rounded-lg">
-                        <p className="text-sm text-center text-yellow-900">
+                    <div className="p-5 mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-md">
+                        <p className="text-sm text-center text-white">
                             Didn't find what you're looking for? Let us know your needs, and we'll tailor a solution just for you.
-                            <a href="#" className="ml-4 font-semibold text-blue-600 rounded-full hover:underline">Schedule Free Consultations</a>
+                            <a href="#" className="ml-4 font-semibold text-white border-b border-white hover:border-transparent hover:text-blue-100 transition-colors duration-200">Schedule Free Consultation</a>
                         </p>
                     </div>
                 </div>
@@ -242,3 +237,5 @@ const Header = () => {
         </header>
     );
 };
+
+export default Header;

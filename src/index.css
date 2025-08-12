@@ -2,14 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .hide-scrollbar {
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide scrollbar but still allow scroll */
+.hide-scrollbar {
   scrollbar-width: none; 
   -ms-overflow-style: none;  
-  background-color: black;
-
 }
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-} */
+}
 
 
