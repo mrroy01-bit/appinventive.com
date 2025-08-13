@@ -1,11 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Header from "../../Component/common/Header";
+
+
 import { FaApple, FaReact, FaQuoteLeft, FaCode, FaRocket, FaAward } from "react-icons/fa";
 import { SiSwift, SiFlutter, SiFirebase, SiXcode, SiAppstore } from "react-icons/si";
 import { IoIosApps, IoMdSpeedometer } from "react-icons/io";
 
 export default function IOSAppDevelopment() {
   return (
+    <>
+      <Header />
+    
     <div className="font-sans text-gray-900 bg-white">
       
       {/* Hero - Modern with 3D effect and animated elements */}
@@ -377,5 +383,6 @@ export default function IOSAppDevelopment() {
         </div>
       </section>
     </div>
+    </>
   );
 }

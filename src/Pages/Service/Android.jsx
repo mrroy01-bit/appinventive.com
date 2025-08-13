@@ -1,10 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Header from "../../Component/common/Header";
+
 import { FaAndroid, FaJava, FaReact, FaQuoteLeft, FaArrowRight } from "react-icons/fa";
 import { SiKotlin, SiFlutter, SiFirebase } from "react-icons/si";
 
 export default function Android() {
   return (
+    <>
+      <Header />
     <div className="font-sans text-gray-800 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       
       {/* Hero Section */}
@@ -409,5 +413,6 @@ export default function Android() {
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -14,6 +14,15 @@ import ClientTestimonial from './Pages/About/ClientsTestimonial';
 import Android from './Pages/Service/Android';
 import IOSAPP from './Pages/Service/IosApp';
 import WebsiteDevelopment from './Pages/Service/WebsiteDevelopment';
+import Portfolio from './Pages/Service/Portfolio';
+import PortfolioVideos  from './Pages/Service/portfolioVideos'; 
+import LogoDesign from './Pages/Service/LogoDesign';
+import FlyerDesignPage from './Pages/Service/FlyerDesignPage';
+import FlexPrintingPage from './Pages/Service/FlexPrintingPage';
+import BannerPrintingPage from './Pages/Service/BannerPrintingPage';
+import SeoServices from './Pages/Service/SeoServices';
+import WebsiteAuditAnalysis from './Pages/Service/WebsiteAuditAnalysis';
+import TechnicalSEOPage from './Pages/Service/TechnicalSEOPage';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -33,6 +42,15 @@ function App() {
           <Route path="/services/android-app-development" element={<Android />} />
           <Route path="/services/ios-app-development" element={<IOSAPP />} />
           <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+          <Route path="/services/portfolio-design" element={<Portfolio />} />
+          <Route path="/services/portfolio-videos" element={<PortfolioVideos />} />
+          <Route path="/services/logo-design" element={<LogoDesign />} />
+          <Route path="/services/flyer-design" element={<FlyerDesignPage />} />
+          <Route path="/services/flex-printing" element={<FlexPrintingPage />} />
+          <Route path="/services/banner-printing" element={<BannerPrintingPage />} />
+          <Route path="/services/seo" element={<SeoServices />} />
+          <Route path="/services/website-audit" element={<WebsiteAuditAnalysis />} />
+          <Route path="/services/technical-seo" element={<TechnicalSEOPage />} />
         </Routes>
       </Router>
     </SmoothScroller>

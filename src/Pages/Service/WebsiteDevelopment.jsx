@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../../Component/common/Header";
+
 import { motion } from "framer-motion";
 import { FaLaptopCode, FaQuoteLeft, FaWordpress, FaCode, FaRocket, FaStar } from "react-icons/fa";
 import { SiReact, SiNextdotjs, SiTailwindcss, SiMongodb, SiNodedotjs, SiVercel, SiGithub, SiFirebase } from "react-icons/si";
@@ -6,6 +8,8 @@ import { HiOutlineSparkles, HiOutlineLightningBolt, HiOutlineGlobe } from "react
 
 export default function WebsiteDevelopment() {
   return (
+    <>
+    <Header />
     <div className="font-sans text-gray-900 bg-white">
       
       {/* Hero Section - Modern with 3D effects and floating elements */}
@@ -425,5 +429,6 @@ export default function WebsiteDevelopment() {
         </div>
       </section>
     </div>
+    </>
   );
 }

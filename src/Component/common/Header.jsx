@@ -71,9 +71,9 @@ const Header = () => {
                         <div className="bg-gradient-to-br from-green-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                             <h3 className="flex items-center mb-4 text-sm font-semibold text-green-600"><GearIcon className="w-5 h-5 mr-2"/> SEO Services</h3>
                             <ul className="space-y-3 list-none p-0 m-0">
-                                <ListItem href="#" title="On-page & Off-page SEO" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
-                                <ListItem href="#" title="Technical SEO" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
-                                <ListItem href="#" title="Website Audit & Analysis" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="/services/seo" title=" SEO" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="/services/technical-seo" title="Technical SEO" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
+                                <ListItem href="/services/website-audit" title="Website Audit & Analysis" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
                                 <ListItem href="#" title="SEO Content Strategy" className="p-2 hover:bg-green-50 rounded-md transition-colors duration-200"/>
                             </ul>
                         </div>
@@ -81,16 +81,16 @@ const Header = () => {
                             <div className="bg-gradient-to-br from-purple-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 mb-6">
                                 <h3 className="flex items-center mb-4 text-sm font-semibold text-purple-600"><PersonIcon className="w-5 h-5 mr-2"/>Graphics Design</h3>
                                 <ul className="space-y-3 list-none p-0 m-0">
-                                    <ListItem href="#" title="Video Editing" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
-                                    <ListItem href="#" title="Logo Designing" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
-                                    <ListItem href="#" title="Flayer Design" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="/services/portfolio-videos" title="Video Editing" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="/services/logo-design" title="Logo Designing" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="/services/flyer-design" title="Flayer Design" className="p-2 hover:bg-purple-50 rounded-md transition-colors duration-200"/>
                                 </ul>
                             </div>
                             <div className="bg-gradient-to-br from-amber-50 to-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                                 <h3 className="flex items-center mb-4 text-sm font-semibold text-amber-600"><BarChartIcon className="w-5 h-5 mr-2"/> Printing Services</h3>
                                 <ul className="space-y-3 list-none p-0 m-0">
-                                    <ListItem href="#" title="Flex Printing & Delivery" className="p-2 hover:bg-amber-50 rounded-md transition-colors duration-200"/>
-                                    <ListItem href="#" title="Banner Printing & Delivery" className="p-2 hover:bg-amber-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="/services/flex-printing" title="Flex Printing & Delivery" className="p-2 hover:bg-amber-50 rounded-md transition-colors duration-200"/>
+                                    <ListItem href="/services/banner-printing" title="Banner Printing & Delivery" className="p-2 hover:bg-amber-50 rounded-md transition-colors duration-200"/>
                                 </ul>
                             </div>
                         </div>
