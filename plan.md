@@ -1,7 +1,5 @@
-# Fade-Up Effect for Text Elements
-
-// This is a fade-up effect for text elements
-// The text will gradually appear with a smooth upward motion
-
-# Locomotive Scroll
-
+# some error fix 
+1 ikea
+ .projectgoals
+   - change text alignment for all goal items to left
+   - add margin top for the first goal item

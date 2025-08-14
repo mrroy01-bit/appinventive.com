@@ -134,10 +134,10 @@ const Header = () => {
                 <div className="grid w-[600px] max-w-[90vw] grid-cols-[2fr,1fr] gap-4 p-4 overflow-auto">
                     <div>
                         <ul className="grid grid-cols-2 gap-4 list-none p-0 m-0">
-                            <ListItem href="#" title="Adidas" className="h-32">A leading digital platform to offer engaging shopping experience.</ListItem>
+                            <ListItem href="/portfolio/adidas" title="Adidas" className="h-32">A leading digital platform to offer engaging shopping experience.</ListItem>
                             <ListItem href="#" title="KFC" className="h-32">A mobile app to digitise & expand KFC's digital footprint.</ListItem>
                             <ListItem href="#" title="Jobget" className="h-32">The MIT innovation award-winning app.</ListItem>
-                            <ListItem href="#" title="IKEA" className="h-32">A transforming ERP solution for the world's largest furniture retailer.</ListItem>
+                            <ListItem href="/portfolio/ikea" title="IKEA" className="h-32">A transforming ERP solution for the world's largest furniture retailer.</ListItem>
                         </ul>
                     </div>
                     <div className="flex flex-col h-full">

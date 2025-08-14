@@ -24,6 +24,9 @@ import SeoServices from './Pages/Service/SeoServices';
 import WebsiteAuditAnalysis from './Pages/Service/WebsiteAuditAnalysis';
 import TechnicalSEOPage from './Pages/Service/TechnicalSEOPage';
 
+import Adidas from './Pages/PortFolio/Adidas';
+import IKEA from './Pages/PortFolio/IKEA';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -51,6 +54,11 @@ function App() {
           <Route path="/services/seo" element={<SeoServices />} />
           <Route path="/services/website-audit" element={<WebsiteAuditAnalysis />} />
           <Route path="/services/technical-seo" element={<TechnicalSEOPage />} />
+
+
+          {/* Portfolio */}
+          <Route path="/portfolio/adidas" element={<Adidas />} />
+          <Route path="/portfolio/ikea" element={<IKEA />} />
         </Routes>
       </Router>
     </SmoothScroller>
