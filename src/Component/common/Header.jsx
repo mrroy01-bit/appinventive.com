@@ -37,10 +37,9 @@ const Header = () => {
                             <ListItem href="/about" title="About Appinventiv" />
                             <ListItem href="/about/core-team" title="Our Core Team" />
                             <ListItem href="/about/we-work" title="How We Work and Function" />
-                            <ListItem href="#" title="Client Portfolio" />
+                            {/* <ListItem href="#" title="Client Portfolio" /> */}
                             <ListItem href="/about/clients-testimonial" title="Client Testimonials" />
                             <ListItem href="/about/corporate" title="Corporate Social Responsibility" />
-                            <ListItem href="/about/career" title="Start Your Career With Us" />
                         </ul>
                     </div>
                     <div className="flex flex-col h-full">
@@ -135,8 +134,6 @@ const Header = () => {
                     <div>
                         <ul className="grid grid-cols-2 gap-4 list-none p-0 m-0">
                             <ListItem href="/portfolio/adidas" title="Adidas" className="h-32">A leading digital platform to offer engaging shopping experience.</ListItem>
-                            <ListItem href="#" title="KFC" className="h-32">A mobile app to digitise & expand KFC's digital footprint.</ListItem>
-                            <ListItem href="#" title="Jobget" className="h-32">The MIT innovation award-winning app.</ListItem>
                             <ListItem href="/portfolio/ikea" title="IKEA" className="h-32">A transforming ERP solution for the world's largest furniture retailer.</ListItem>
                         </ul>
                     </div>
@@ -165,7 +162,7 @@ const Header = () => {
                     <div>
                         <h3 className="mb-3 text-sm font-medium text-neutral-500">Recommended Blogs</h3>
                         <ul className="space-y-2 list-none p-0 m-0">
-                           <ListItem href="#" title="How Much Does It Cost to Build a Safety Observation App?" className="p-2"/>
+                           <ListItem href="/blog" title="How Generative AI is Powering Digital Product Development – 10 Use Cases, Benefits, and Real Examples" className="p-2"/>
                            <ListItem href="#" title="Staff Augmentation vs In-House Hiring: Which Is the Better Model?" className="p-2"/>
                            <ListItem href="#" title="10 Ways Generative AI is Transforming the eCommerce Industry" className="p-2"/>
                         </ul>

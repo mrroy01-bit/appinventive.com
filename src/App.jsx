@@ -26,6 +26,7 @@ import TechnicalSEOPage from './Pages/Service/TechnicalSEOPage';
 
 import Adidas from './Pages/PortFolio/Adidas';
 import IKEA from './Pages/PortFolio/IKEA';
+import Blog from './Pages/Resources/blog';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -59,6 +60,7 @@ function App() {
           {/* Portfolio */}
           <Route path="/portfolio/adidas" element={<Adidas />} />
           <Route path="/portfolio/ikea" element={<IKEA />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </Router>
     </SmoothScroller>
