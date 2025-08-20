@@ -306,12 +306,12 @@ const Footer = () => {
       </div>
 
       {/* Back to top button */}
-      <button
+      {/* <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-6 right-6 bg-gray-800 text-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-700 focus:outline-none"
       >
         <ArrowUp className="h-5 w-5" />
-      </button>
+      </button> */}
     </footer>
   );
 };

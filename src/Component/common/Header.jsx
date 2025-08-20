@@ -37,7 +37,7 @@ const Header = () => {
                             <ListItem href="/about" title="About Appinventiv" />
                             <ListItem href="/about/core-team" title="Our Core Team" />
                             <ListItem href="/about/we-work" title="How We Work and Function" />
-                            {/* <ListItem href="#" title="Client Portfolio" /> */}
+                            <ListItem href="/about/client-portfolio" title="Client Portfolio" />
                             <ListItem href="/about/clients-testimonial" title="Client Testimonials" />
                             <ListItem href="/about/corporate" title="Corporate Social Responsibility" />
                         </ul>

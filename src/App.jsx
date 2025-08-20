@@ -9,6 +9,7 @@ import WeWork from './Pages/About/weWork';
 import Career from './Pages/About/Career';
 import Corporate from './Pages/About/Corporate';
 import ClientTestimonial from './Pages/About/ClientsTestimonial';
+import ClientPortfolio from './Pages/About/ClientPortfolio.jsx';
 
 // Service 
 import Android from './Pages/Service/Android';
@@ -42,6 +43,7 @@ function App() {
           <Route path="/about/career" element={<Career />} />
           <Route path='/about/corporate' element={<Corporate/>} />
           <Route path='/about/clients-testimonial' element={<ClientTestimonial />} />
+          <Route path='/about/client-portfolio' element={<ClientPortfolio />} />
 
           <Route path="/services/android-app-development" element={<Android />} />
           <Route path="/services/ios-app-development" element={<IOSAPP />} />
